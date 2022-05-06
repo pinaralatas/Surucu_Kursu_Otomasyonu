@@ -91,6 +91,8 @@ namespace Umuttepe_Surucu_Kursu
        
         private void Kursiyer_bilgileri_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'surucu_kursuDataSet10.aday_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.aday_bilgileriTableAdapter4.Fill(this.surucu_kursuDataSet10.aday_bilgileri);
             // TODO: Bu kod satırı 'surucu_kursuDataSet7.aday_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
             this.aday_bilgileriTableAdapter3.Fill(this.surucu_kursuDataSet7.aday_bilgileri);
 
@@ -117,8 +119,9 @@ namespace Umuttepe_Surucu_Kursu
                     }
                     else
                     {
+                        baglanti.SqlProcess("insert into nufus_bilgileri(seri_no)values('" + seri_no.Text + "') ");
                         baglanti.SqlProcess("insert into not_bilgileri(adayid)values('" + adayid.Text + "') ");
-                        baglanti.SqlProcess("insert into aday_bilgileri(adayid,tc,ad,soyad,yas,telefon,saglik_raporu,adli_belge,kayit_tarihi,ehliyet_tur,ogrenim_durumu)values('" + adayid.Text + "','" + tc.Text + "','" + ad.Text + "','" + soyad.Text + "','" + yas.Text + "','" + telefon.Text + "','" + saglik.Text + "','" + adli.Text + "','" + kayıtTarihi.Value + "','" +ehliyetTur.Text + "','" + ogrenim.Text + "')");
+                        baglanti.SqlProcess("insert into aday_bilgileri(adayid,tc,ad,soyad,yas,telefon,saglik_raporu,adli_belge,kayit_tarihi,ehliyet_tur,ogrenim_durumu,seri_no)values('" + adayid.Text + "','" + tc.Text + "','" + ad.Text + "','" + soyad.Text + "','" + yas.Text + "','" + telefon.Text + "','" + saglik.Text + "','" + adli.Text + "','" + kayıtTarihi.Value + "','" +ehliyetTur.Text + "','" + ogrenim.Text + "','" + seri_no.Text + "')");
                         
                         MessageBox.Show("Bilgiler Başarıyla Güncellendi");
 

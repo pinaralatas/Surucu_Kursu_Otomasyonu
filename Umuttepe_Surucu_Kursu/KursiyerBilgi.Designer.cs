@@ -30,7 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Kursiyer_bilgileri));
+            System.Windows.Forms.Label aday;
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adayid = new System.Windows.Forms.TextBox();
             this.adli = new System.Windows.Forms.ComboBox();
             this.saglik = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -38,8 +40,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guncelle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.adaybilgileriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.surucu_kursuDataSet3 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet3();
+            this.adaybilgileriBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.surucu_kursuDataSet7 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet7();
             this.label1 = new System.Windows.Forms.Label();
             this.sil = new System.Windows.Forms.Button();
             this.kayıtTarihi = new System.Windows.Forms.DateTimePicker();
@@ -58,6 +60,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.adaybilgileriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.surucu_kursuDataSet3 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet3();
             this.adaybilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.surucu_kursuDataSet2 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet2();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -68,11 +72,14 @@
             this.surucu_kursuDataSet5 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet5();
             this.adaybilgileriBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.aday_bilgileriTableAdapter2 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet5TableAdapters.aday_bilgileriTableAdapter();
-            this.adayid = new System.Windows.Forms.TextBox();
-            this.surucu_kursuDataSet7 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet7();
-            this.adaybilgileriBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.aday_bilgileriTableAdapter3 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet7TableAdapters.aday_bilgileriTableAdapter();
+            this.label11 = new System.Windows.Forms.Label();
+            this.seri_no = new System.Windows.Forms.TextBox();
+            this.surucu_kursuDataSet10 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet10();
+            this.adaybilgileriBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.aday_bilgileriTableAdapter4 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet10TableAdapters.aday_bilgileriTableAdapter();
             this.adayidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,9 +90,12 @@
             this.kayittarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ehliyetturDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ogrenimdurumuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            aday = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource)).BeginInit();
@@ -94,13 +104,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.seri_no);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(aday);
             this.panel1.Controls.Add(this.adayid);
             this.panel1.Controls.Add(this.adli);
             this.panel1.Controls.Add(this.saglik);
@@ -132,6 +145,14 @@
             this.panel1.Size = new System.Drawing.Size(998, 461);
             this.panel1.TabIndex = 0;
             // 
+            // adayid
+            // 
+            this.adayid.Location = new System.Drawing.Point(157, 364);
+            this.adayid.MaxLength = 10;
+            this.adayid.Name = "adayid";
+            this.adayid.Size = new System.Drawing.Size(136, 20);
+            this.adayid.TabIndex = 41;
+            // 
             // adli
             // 
             this.adli.FormattingEnabled = true;
@@ -161,7 +182,7 @@
             this.label13.ForeColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(45, 330);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(102, 16);
+            this.label13.Size = new System.Drawing.Size(101, 16);
             this.label13.TabIndex = 38;
             this.label13.Text = "Ehliyet Türü  :";
             // 
@@ -211,6 +232,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.adayidDataGridViewTextBoxColumn,
+            this.serinoDataGridViewTextBoxColumn,
             this.tcDataGridViewTextBoxColumn,
             this.adDataGridViewTextBoxColumn,
             this.soyadDataGridViewTextBoxColumn,
@@ -221,22 +243,22 @@
             this.kayittarihiDataGridViewTextBoxColumn,
             this.ehliyetturDataGridViewTextBoxColumn,
             this.ogrenimdurumuDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.adaybilgileriBindingSource3;
+            this.dataGridView1.DataSource = this.adaybilgileriBindingSource4;
             this.dataGridView1.Location = new System.Drawing.Point(3, 15);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(992, 162);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // adaybilgileriBindingSource1
+            // adaybilgileriBindingSource3
             // 
-            this.adaybilgileriBindingSource1.DataMember = "aday_bilgileri";
-            this.adaybilgileriBindingSource1.DataSource = this.surucu_kursuDataSet3;
+            this.adaybilgileriBindingSource3.DataMember = "aday_bilgileri";
+            this.adaybilgileriBindingSource3.DataSource = this.surucu_kursuDataSet7;
             // 
-            // surucu_kursuDataSet3
+            // surucu_kursuDataSet7
             // 
-            this.surucu_kursuDataSet3.DataSetName = "surucu_kursuDataSet3";
-            this.surucu_kursuDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.surucu_kursuDataSet7.DataSetName = "surucu_kursuDataSet7";
+            this.surucu_kursuDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -340,7 +362,7 @@
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(662, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 16);
+            this.label10.Size = new System.Drawing.Size(109, 16);
             this.label10.TabIndex = 10;
             this.label10.Text = "Kayıt Tarihi     :";
             // 
@@ -351,7 +373,7 @@
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(668, 262);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 16);
+            this.label9.Size = new System.Drawing.Size(103, 16);
             this.label9.TabIndex = 9;
             this.label9.Text = "Adli Belge     :";
             // 
@@ -362,7 +384,7 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(647, 228);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 16);
+            this.label8.Size = new System.Drawing.Size(130, 16);
             this.label8.TabIndex = 8;
             this.label8.Text = "Sağlık Raporu     :";
             // 
@@ -373,7 +395,7 @@
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(367, 266);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(85, 16);
+            this.label7.Size = new System.Drawing.Size(84, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "Telefon     :";
             // 
@@ -384,7 +406,7 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(322, 298);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 16);
+            this.label6.Size = new System.Drawing.Size(129, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Öğrenim Durumu :";
             // 
@@ -395,7 +417,7 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(393, 230);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 16);
+            this.label5.Size = new System.Drawing.Size(58, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Yaş     :";
             // 
@@ -406,7 +428,7 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(70, 293);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.Size = new System.Drawing.Size(76, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Soyad     :";
             // 
@@ -417,7 +439,7 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(100, 265);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 16);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ad    :";
             // 
@@ -429,9 +451,19 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(50, 230);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "TC Kimlik     :";
+            // 
+            // adaybilgileriBindingSource1
+            // 
+            this.adaybilgileriBindingSource1.DataMember = "aday_bilgileri";
+            this.adaybilgileriBindingSource1.DataSource = this.surucu_kursuDataSet3;
+            // 
+            // surucu_kursuDataSet3
+            // 
+            this.surucu_kursuDataSet3.DataSetName = "surucu_kursuDataSet3";
+            this.surucu_kursuDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // adaybilgileriBindingSource
             // 
@@ -500,32 +532,64 @@
             // 
             this.aday_bilgileriTableAdapter2.ClearBeforeFill = true;
             // 
-            // adayid
-            // 
-            this.adayid.Location = new System.Drawing.Point(369, 349);
-            this.adayid.Name = "adayid";
-            this.adayid.Size = new System.Drawing.Size(92, 20);
-            this.adayid.TabIndex = 41;
-            // 
-            // surucu_kursuDataSet7
-            // 
-            this.surucu_kursuDataSet7.DataSetName = "surucu_kursuDataSet7";
-            this.surucu_kursuDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // adaybilgileriBindingSource3
-            // 
-            this.adaybilgileriBindingSource3.DataMember = "aday_bilgileri";
-            this.adaybilgileriBindingSource3.DataSource = this.surucu_kursuDataSet7;
-            // 
             // aday_bilgileriTableAdapter3
             // 
             this.aday_bilgileriTableAdapter3.ClearBeforeFill = true;
+            // 
+            // aday
+            // 
+            aday.AutoSize = true;
+            aday.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            aday.ForeColor = System.Drawing.Color.White;
+            aday.Location = new System.Drawing.Point(68, 367);
+            aday.Name = "aday";
+            aday.Size = new System.Drawing.Size(78, 16);
+            aday.TabIndex = 42;
+            aday.Text = "Aday ID   :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(376, 334);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 16);
+            this.label11.TabIndex = 43;
+            this.label11.Text = "Seri No   :";
+            // 
+            // seri_no
+            // 
+            this.seri_no.Location = new System.Drawing.Point(474, 330);
+            this.seri_no.Name = "seri_no";
+            this.seri_no.Size = new System.Drawing.Size(136, 20);
+            this.seri_no.TabIndex = 44;
+            // 
+            // surucu_kursuDataSet10
+            // 
+            this.surucu_kursuDataSet10.DataSetName = "surucu_kursuDataSet10";
+            this.surucu_kursuDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // adaybilgileriBindingSource4
+            // 
+            this.adaybilgileriBindingSource4.DataMember = "aday_bilgileri";
+            this.adaybilgileriBindingSource4.DataSource = this.surucu_kursuDataSet10;
+            // 
+            // aday_bilgileriTableAdapter4
+            // 
+            this.aday_bilgileriTableAdapter4.ClearBeforeFill = true;
             // 
             // adayidDataGridViewTextBoxColumn
             // 
             this.adayidDataGridViewTextBoxColumn.DataPropertyName = "adayid";
             this.adayidDataGridViewTextBoxColumn.HeaderText = "adayid";
             this.adayidDataGridViewTextBoxColumn.Name = "adayidDataGridViewTextBoxColumn";
+            // 
+            // serinoDataGridViewTextBoxColumn
+            // 
+            this.serinoDataGridViewTextBoxColumn.DataPropertyName = "seri_no";
+            this.serinoDataGridViewTextBoxColumn.HeaderText = "seri_no";
+            this.serinoDataGridViewTextBoxColumn.Name = "serinoDataGridViewTextBoxColumn";
             // 
             // tcDataGridViewTextBoxColumn
             // 
@@ -604,6 +668,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource)).EndInit();
@@ -613,8 +679,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adaybilgileriBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -663,7 +729,13 @@
         private surucu_kursuDataSet7 surucu_kursuDataSet7;
         private System.Windows.Forms.BindingSource adaybilgileriBindingSource3;
         private surucu_kursuDataSet7TableAdapters.aday_bilgileriTableAdapter aday_bilgileriTableAdapter3;
+        private System.Windows.Forms.TextBox seri_no;
+        private System.Windows.Forms.Label label11;
+        private surucu_kursuDataSet10 surucu_kursuDataSet10;
+        private System.Windows.Forms.BindingSource adaybilgileriBindingSource4;
+        private surucu_kursuDataSet10TableAdapters.aday_bilgileriTableAdapter aday_bilgileriTableAdapter4;
         private System.Windows.Forms.DataGridViewTextBoxColumn adayidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serinoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tcDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn soyadDataGridViewTextBoxColumn;

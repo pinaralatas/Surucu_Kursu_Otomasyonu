@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nufus_bilgi));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.sil = new System.Windows.Forms.Button();
             this.guncelle = new System.Windows.Forms.Button();
             this.kanGrubu = new System.Windows.Forms.ComboBox();
             this.medeniHal = new System.Windows.Forms.ComboBox();
@@ -42,8 +41,6 @@
             this.babaAd = new System.Windows.Forms.TextBox();
             this.soyad = new System.Windows.Forms.TextBox();
             this.ad = new System.Windows.Forms.TextBox();
-            this.tc = new System.Windows.Forms.TextBox();
-            this.seriNo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,7 +49,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,21 +56,37 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.surucu_kursuDataSet8 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet8();
+            this.nufusbilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nufus_bilgileriTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet8TableAdapters.nufus_bilgileriTableAdapter();
+            this.seriNo = new System.Windows.Forms.TextBox();
+            this.surucu_kursuDataSet9 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet9();
+            this.nufusbilgileriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.nufus_bilgileriTableAdapter1 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet9TableAdapters.nufus_bilgileriTableAdapter();
+            this.serinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.babaadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anneadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumyeriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumtarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kangrubuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medenihalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nufusbilgileriBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nufusbilgileriBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkRed;
-            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.seriNo);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.sil);
             this.panel1.Controls.Add(this.guncelle);
             this.panel1.Controls.Add(this.kanGrubu);
             this.panel1.Controls.Add(this.medeniHal);
@@ -84,8 +96,6 @@
             this.panel1.Controls.Add(this.babaAd);
             this.panel1.Controls.Add(this.soyad);
             this.panel1.Controls.Add(this.ad);
-            this.panel1.Controls.Add(this.tc);
-            this.panel1.Controls.Add(this.seriNo);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label8);
@@ -94,52 +104,32 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(298, 446);
             this.panel1.TabIndex = 0;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Gainsboro;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(188, 402);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox3.TabIndex = 25;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gainsboro;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(40, 402);
+            this.pictureBox2.Location = new System.Drawing.Point(94, 402);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 29);
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
             // 
-            // sil
-            // 
-            this.sil.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sil.Location = new System.Drawing.Point(182, 400);
-            this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(80, 33);
-            this.sil.TabIndex = 23;
-            this.sil.Text = "         SİL";
-            this.sil.UseVisualStyleBackColor = true;
-            // 
             // guncelle
             // 
             this.guncelle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guncelle.Location = new System.Drawing.Point(37, 400);
+            this.guncelle.Location = new System.Drawing.Point(91, 400);
             this.guncelle.Name = "guncelle";
             this.guncelle.Size = new System.Drawing.Size(116, 33);
             this.guncelle.TabIndex = 22;
             this.guncelle.Text = "       GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = true;
+            this.guncelle.Click += new System.EventHandler(this.guncelle_Click);
             // 
             // kanGrubu
             // 
@@ -224,25 +214,6 @@
             this.ad.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TusaBasilinca);
             this.ad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ad_KeyPress);
             // 
-            // tc
-            // 
-            this.tc.Location = new System.Drawing.Point(116, 54);
-            this.tc.MaxLength = 11;
-            this.tc.Name = "tc";
-            this.tc.Size = new System.Drawing.Size(169, 20);
-            this.tc.TabIndex = 13;
-            this.tc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TusaBasilinca);
-            this.tc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tc_KeyPress);
-            // 
-            // seriNo
-            // 
-            this.seriNo.Location = new System.Drawing.Point(116, 17);
-            this.seriNo.Name = "seriNo";
-            this.seriNo.Size = new System.Drawing.Size(169, 20);
-            this.seriNo.TabIndex = 12;
-            this.seriNo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TusaBasilinca);
-            this.seriNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.seriNo_KeyPress);
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -323,16 +294,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Ad  :";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(47, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "T.C No  :";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -345,7 +306,17 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.serinoDataGridViewTextBoxColumn,
+            this.babaadiDataGridViewTextBoxColumn,
+            this.anneadiDataGridViewTextBoxColumn,
+            this.dogumyeriDataGridViewTextBoxColumn,
+            this.dogumtarihDataGridViewTextBoxColumn,
+            this.kangrubuDataGridViewTextBoxColumn,
+            this.medenihalDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.nufusbilgileriBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(13, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(601, 137);
@@ -404,6 +375,83 @@
             this.label13.TabIndex = 15;
             this.label13.Text = "Nüfus Bilgilerini Giriniz  :";
             // 
+            // surucu_kursuDataSet8
+            // 
+            this.surucu_kursuDataSet8.DataSetName = "surucu_kursuDataSet8";
+            this.surucu_kursuDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nufusbilgileriBindingSource
+            // 
+            this.nufusbilgileriBindingSource.DataMember = "nufus_bilgileri";
+            this.nufusbilgileriBindingSource.DataSource = this.surucu_kursuDataSet8;
+            // 
+            // nufus_bilgileriTableAdapter
+            // 
+            this.nufus_bilgileriTableAdapter.ClearBeforeFill = true;
+            // 
+            // seriNo
+            // 
+            this.seriNo.Location = new System.Drawing.Point(129, 22);
+            this.seriNo.Name = "seriNo";
+            this.seriNo.Size = new System.Drawing.Size(133, 20);
+            this.seriNo.TabIndex = 26;
+            // 
+            // surucu_kursuDataSet9
+            // 
+            this.surucu_kursuDataSet9.DataSetName = "surucu_kursuDataSet9";
+            this.surucu_kursuDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nufusbilgileriBindingSource1
+            // 
+            this.nufusbilgileriBindingSource1.DataMember = "nufus_bilgileri";
+            this.nufusbilgileriBindingSource1.DataSource = this.surucu_kursuDataSet9;
+            // 
+            // nufus_bilgileriTableAdapter1
+            // 
+            this.nufus_bilgileriTableAdapter1.ClearBeforeFill = true;
+            // 
+            // serinoDataGridViewTextBoxColumn
+            // 
+            this.serinoDataGridViewTextBoxColumn.DataPropertyName = "seri_no";
+            this.serinoDataGridViewTextBoxColumn.HeaderText = "seri_no";
+            this.serinoDataGridViewTextBoxColumn.Name = "serinoDataGridViewTextBoxColumn";
+            // 
+            // babaadiDataGridViewTextBoxColumn
+            // 
+            this.babaadiDataGridViewTextBoxColumn.DataPropertyName = "baba_adi";
+            this.babaadiDataGridViewTextBoxColumn.HeaderText = "baba_adi";
+            this.babaadiDataGridViewTextBoxColumn.Name = "babaadiDataGridViewTextBoxColumn";
+            // 
+            // anneadiDataGridViewTextBoxColumn
+            // 
+            this.anneadiDataGridViewTextBoxColumn.DataPropertyName = "anne_adi";
+            this.anneadiDataGridViewTextBoxColumn.HeaderText = "anne_adi";
+            this.anneadiDataGridViewTextBoxColumn.Name = "anneadiDataGridViewTextBoxColumn";
+            // 
+            // dogumyeriDataGridViewTextBoxColumn
+            // 
+            this.dogumyeriDataGridViewTextBoxColumn.DataPropertyName = "dogum_yeri";
+            this.dogumyeriDataGridViewTextBoxColumn.HeaderText = "dogum_yeri";
+            this.dogumyeriDataGridViewTextBoxColumn.Name = "dogumyeriDataGridViewTextBoxColumn";
+            // 
+            // dogumtarihDataGridViewTextBoxColumn
+            // 
+            this.dogumtarihDataGridViewTextBoxColumn.DataPropertyName = "dogum_tarih";
+            this.dogumtarihDataGridViewTextBoxColumn.HeaderText = "dogum_tarih";
+            this.dogumtarihDataGridViewTextBoxColumn.Name = "dogumtarihDataGridViewTextBoxColumn";
+            // 
+            // kangrubuDataGridViewTextBoxColumn
+            // 
+            this.kangrubuDataGridViewTextBoxColumn.DataPropertyName = "kan_grubu";
+            this.kangrubuDataGridViewTextBoxColumn.HeaderText = "kan_grubu";
+            this.kangrubuDataGridViewTextBoxColumn.Name = "kangrubuDataGridViewTextBoxColumn";
+            // 
+            // medenihalDataGridViewTextBoxColumn
+            // 
+            this.medenihalDataGridViewTextBoxColumn.DataPropertyName = "medeni_hal";
+            this.medenihalDataGridViewTextBoxColumn.HeaderText = "medeni_hal";
+            this.medenihalDataGridViewTextBoxColumn.Name = "medenihalDataGridViewTextBoxColumn";
+            // 
             // nufus_bilgi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -422,12 +470,15 @@
             this.Load += new System.EventHandler(this.nufus_bilgi_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nufusbilgileriBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nufusbilgileriBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +495,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dogumTarihi;
@@ -453,9 +503,6 @@
         private System.Windows.Forms.TextBox babaAd;
         private System.Windows.Forms.TextBox soyad;
         private System.Windows.Forms.TextBox ad;
-        private System.Windows.Forms.TextBox tc;
-        private System.Windows.Forms.TextBox seriNo;
-        private System.Windows.Forms.Button sil;
         private System.Windows.Forms.Button guncelle;
         private System.Windows.Forms.ComboBox kanGrubu;
         private System.Windows.Forms.ComboBox medeniHal;
@@ -463,8 +510,21 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel3;
+        private surucu_kursuDataSet8 surucu_kursuDataSet8;
+        private System.Windows.Forms.BindingSource nufusbilgileriBindingSource;
+        private surucu_kursuDataSet8TableAdapters.nufus_bilgileriTableAdapter nufus_bilgileriTableAdapter;
+        private System.Windows.Forms.TextBox seriNo;
+        private surucu_kursuDataSet9 surucu_kursuDataSet9;
+        private System.Windows.Forms.BindingSource nufusbilgileriBindingSource1;
+        private surucu_kursuDataSet9TableAdapters.nufus_bilgileriTableAdapter nufus_bilgileriTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn serinoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn babaadiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anneadiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dogumyeriDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dogumtarihDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kangrubuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medenihalDataGridViewTextBoxColumn;
     }
 }

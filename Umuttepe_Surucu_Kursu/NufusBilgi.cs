@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Umuttepe_Surucu_Kursu
 {
@@ -17,8 +18,7 @@ namespace Umuttepe_Surucu_Kursu
         {
             InitializeComponent();
         }
-        MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder();
-        MySqlConnection baglanti;
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -31,28 +31,14 @@ namespace Umuttepe_Surucu_Kursu
 
         private void nufus_bilgi_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'surucu_kursuDataSet9.nufus_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.nufus_bilgileriTableAdapter1.Fill(this.surucu_kursuDataSet9.nufus_bilgileri);
+
             panel3.BackColor = Color.FromArgb(100, 0, 0, 0);
 
-            build.Server = "localhost";
-            build.UserID = "root";
-            build.Password = "Donki6612.";
-            build.Database = "Umuttepe_Surucu_Kursu";
-            baglanti = new MySqlConnection(build.ToString());
-            Listele_Ara("Select*from nufus_bılgılerı");
-
+           
         }
 
-        public DataTable Listele_Ara(string sql)
-        {
-            DataTable tbl = new DataTable();
-            baglanti.Open();
-            MySqlDataAdapter adtr = new MySqlDataAdapter(sql, baglanti);
-            adtr.Fill(tbl);
-            dataGridView1.DataSource = tbl;
-            baglanti.Close();
-
-            return tbl;
-        }
         private void TusaBasilinca(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -108,6 +94,50 @@ namespace Umuttepe_Surucu_Kursu
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void guncelle_Click(object sender, EventArgs e)
+        {
+            VeriBaglanti baglanti = new VeriBaglanti();
+
+            try
+            {
+                if (seriNo.Text == "" || babaAd.Text == "" || anneAd.Text == ""||dogumYeri.Text == "" || dogumTarihi.Text == "" || kanGrubu.Text == "" || medeniHal.Text == "")
+                {
+
+                }
+                else
+                {
+
+                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from nufus_bilgileri where seri_no='" + seriNo.Text.ToString() + "'");
+
+                    if (reader.HasRows)
+                    {
+                        baglanti.CloseConnection();
+
+                       
+                        baglanti.SqlProcess("update nufus_bilgileri SET baba_adi='" + babaAd.Text + "',anne_adi='" + anneAd.Text + "',dogum_yeri='" + dogumYeri.Text + "',dogum_tarih='" + dogumTarihi.Value + "',kan_grubu='" + kanGrubu.Text + "',medeni_hal='" + medeniHal.Text + "'where seri_no='" + seriNo.Text + "' ");
+
+                        MessageBox.Show("Nüfus bilgileri başarıyla güncellendi");
+                        AnaSayfa anaSayfa = new AnaSayfa();
+                        anaSayfa.Show(this);
+                        Hide();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+                    }
+
+
+                }
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("İşlem Sırasında Hata Oluştu." + error.Message);
+            }
+
         }
     }
 }

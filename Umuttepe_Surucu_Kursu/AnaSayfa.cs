@@ -90,7 +90,7 @@ namespace Umuttepe_Surucu_Kursu
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {
-            //aaade
+            
         }
     }
 }

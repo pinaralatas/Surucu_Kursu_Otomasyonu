@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A645B186-A2DE-4AEB-9DAF-BE3585B2F606}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Umuttepe_Surucu_Kursu</RootNamespace>
+    <AssemblyName>Umuttepe_Surucu_Kursu</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Azure.Management.Sql, Version=0.9.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.Management.CollectorTasks, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.SQLTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=AMD64" />
+    <Reference Include="MySql.Data, Version=8.0.29.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="surucu_kursuDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="VeriBaglanti.cs" />
+    <Compile Include="GirisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GirisForm.Designer.cs">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KursiyerBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KursiyerBilgi.Designer.cs">
+      <DependentUpon>KursiyerBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NufusBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NufusBilgi.Designer.cs">
+      <DependentUpon>NufusBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnaSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnaSayfa.Designer.cs">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotBilgileri.Designer.cs">
+      <DependentUpon>NotBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OdemeBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdemeBilgi.Designer.cs">
+      <DependentUpon>OdemeBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelBilgi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelBilgi.Designer.cs">
+      <DependentUpon>PersonelBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KursiyerArama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KursiyerArama.Designer.cs">
+      <DependentUpon>KursiyerArama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SifreYenileme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SifreYenileme.Designer.cs">
+      <DependentUpon>SifreYenileme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="surucu_kursuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Umuttepe_Surucu_KursuDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Umuttepe_Surucu_KursuDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VeriBaglanti.resx">
+      <DependentUpon>VeriBaglanti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GirisForm.resx">
+      <DependentUpon>GirisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KursiyerBilgi.resx">
+      <DependentUpon>KursiyerBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NufusBilgi.resx">
+      <DependentUpon>NufusBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnaSayfa.resx">
+      <DependentUpon>AnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotBilgileri.resx">
+      <DependentUpon>NotBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdemeBilgi.resx">
+      <DependentUpon>OdemeBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelBilgi.resx">
+      <DependentUpon>PersonelBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KursiyerArama.resx">
+      <DependentUpon>KursiyerArama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SifreYenileme.resx">
+      <DependentUpon>SifreYenileme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="surucu_kursuDataSet.xsc">
+      <DependentUpon>surucu_kursuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet.xss">
+      <DependentUpon>surucu_kursuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet1.xsc">
+      <DependentUpon>surucu_kursuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet1.xss">
+      <DependentUpon>surucu_kursuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet2.xsc">
+      <DependentUpon>surucu_kursuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet2.xss">
+      <DependentUpon>surucu_kursuDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet3.xsc">
+      <DependentUpon>surucu_kursuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet3.xss">
+      <DependentUpon>surucu_kursuDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet4.xsc">
+      <DependentUpon>surucu_kursuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet4.xss">
+      <DependentUpon>surucu_kursuDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet5.xsc">
+      <DependentUpon>surucu_kursuDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet5.xss">
+      <DependentUpon>surucu_kursuDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet6.xsc">
+      <DependentUpon>surucu_kursuDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet6.xss">
+      <DependentUpon>surucu_kursuDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet7.xsc">
+      <DependentUpon>surucu_kursuDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet7.xss">
+      <DependentUpon>surucu_kursuDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Umuttepe_Surucu_KursuDataSet.xsc">
+      <DependentUpon>Umuttepe_Surucu_KursuDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Umuttepe_Surucu_KursuDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Umuttepe_Surucu_KursuDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Umuttepe_Surucu_KursuDataSet.xss">
+      <DependentUpon>Umuttepe_Surucu_KursuDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

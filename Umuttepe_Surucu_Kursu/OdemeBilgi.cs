@@ -21,6 +21,10 @@ namespace Umuttepe_Surucu_Kursu
 
         private void OdemeBilgi_Load(object sender, EventArgs e)
         {
+            // TODO: Bu kod satırı 'surucu_kursuDataSet14.borc' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.borcTableAdapter1.Fill(this.surucu_kursuDataSet14.borc);
+
+
 
             label2.Enabled = false;
             label3.Enabled = false;
@@ -137,32 +141,75 @@ namespace Umuttepe_Surucu_Kursu
 
             try
             {
-                if (kartNo.Text == "" || kartAd.Text == "" || kartSoyad.Text == "" || kartSoyad.Text == "" || cvv.Text == "" || ay.Text == "" || yıl.Text == "")
+                if (kredi.Checked)
                 {
 
+
+                    if (kartNo.Text.ToString() == "" || kartAd.Text == "" || kartSoyad.Text == ""
+                        || cvv.Text == "" || ay.Text == "" || yıl.Text == "" || adayid.Text == ""|| odenecek_miktar.Text == "")
+                    {
+                        MessageBox.Show("Bütün boşlukları doldurunuz!!");
+                    }
+                    else
+                    {
+
+                        SqlDataReader reader = baglanti.VeriOkuyucu("select  * from borc where adayid='" + adayid.Text.ToString() + "'");
+
+                        if (reader.HasRows)
+                        {
+                            baglanti.CloseConnection();
+
+                            baglanti.SqlProcess("update borc SET cvv='" + cvv.Text + "'," +
+                                "kart_sahibinin_adi='" + kartAd.Text + "'," +
+                                "kart_sahibinin_soyad='" + kartSoyad.Text + "'," +
+                                "son_ay='" + ay.Text + "',son_yil='" + yıl.Text + "'," +
+                                "kart_no='" + kartNo.Text.ToString() + "',son_odenen_tutar='" + odenecek_miktar.Text + "',kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), son_odeme_turu='Kredi Kartı' where adayid='" + adayid.Text.ToString() + "' ");
+
+                            MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
+                            AnaSayfa anaSayfa = new AnaSayfa();
+                            anaSayfa.Show(this);
+                            Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+                        }
+
+
+                    }
                 }
                 else
                 {
 
-                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from odeme_bilgileri where tc='" + tc.Text.ToString() + "'");
-                    if (reader.HasRows)
+                    if (odenecek_miktar.Text == "" || adayid.Text.ToString() == "")
                     {
-                        baglanti.CloseConnection();
-
-                        baglanti.SqlProcess("update odeme_bilgileri SET cvv='" + cvv.Text + "',kart_sahibinin_adi='" + kartAd.Text + "',kart_sahibinin_soyadi='" + kartSoyad.Text + "',son_ay='" + ay.Text + "',son_yil='" + yıl.Text + "',tc='" + tc.Text + "' where kart_no='" + kartNo.Text + "' ");
-
-                        MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
-                        AnaSayfa anaSayfa = new AnaSayfa();
-                        anaSayfa.Show(this);
-                        Hide();
-                        //idodeme_tur için formda doldurulması gereken alan yok?
+                        MessageBox.Show("Bütün boşlukları doldurunuz!!");
                     }
                     else
                     {
-                        MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+
+                        SqlDataReader reader = baglanti.VeriOkuyucu("select  * from borc where adayid='" + adayid.Text.ToString() + "'");
+
+                        if (reader.HasRows)
+                        {
+                            baglanti.CloseConnection();
+
+                            baglanti.SqlProcess("update borc SET son_odenen_tutar='" + odenecek_miktar.Text + "',kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), son_odeme_turu='Nakit' where adayid='" + adayid.Text.ToString() + "' ");
+
+                            //  kullanıcı bulunamadı hatası!! tc yi foreign key olarak almak yerine adayid gibi mi alınmalı başka bir şey??
+                            MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
+                            AnaSayfa anaSayfa = new AnaSayfa();
+                            anaSayfa.Show(this);
+                            Hide();
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+                        }
+
                     }
-
-
                 }
             }
             catch (Exception error)
@@ -170,6 +217,11 @@ namespace Umuttepe_Surucu_Kursu
 
                 MessageBox.Show("İşlem Sırasında Hata Oluştu." + error.Message);
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

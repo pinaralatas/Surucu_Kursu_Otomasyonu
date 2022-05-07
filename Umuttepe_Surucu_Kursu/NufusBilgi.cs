@@ -102,21 +102,25 @@ namespace Umuttepe_Surucu_Kursu
 
             try
             {
-                if (seriNo.Text == "" || babaAd.Text == "" || anneAd.Text == ""||dogumYeri.Text == "" || dogumTarihi.Text == "" || kanGrubu.Text == "" || medeniHal.Text == "")
+                if (seriNo.Text == "" || babaAd.Text == "" || anneAd.Text == ""
+                    ||dogumYeri.Text == "" || dogumTarihi.Text == "" 
+                    || kanGrubu.Text == "" || medeniHal.Text == "")
                 {
 
                 }
                 else
                 {
 
-                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from nufus_bilgileri where seri_no='" + seriNo.Text.ToString() + "'");
+                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from aday_bilgileri where seri_no='" + seriNo.Text.ToString() + "'");
 
                     if (reader.HasRows)
                     {
                         baglanti.CloseConnection();
 
                        
-                        baglanti.SqlProcess("update nufus_bilgileri SET baba_adi='" + babaAd.Text + "',anne_adi='" + anneAd.Text + "',dogum_yeri='" + dogumYeri.Text + "',dogum_tarih='" + dogumTarihi.Value + "',kan_grubu='" + kanGrubu.Text + "',medeni_hal='" + medeniHal.Text + "'where seri_no='" + seriNo.Text + "' ");
+                        baglanti.SqlProcess("update nufus_bilgileri SET baba_adi='" + babaAd.Text + "',anne_adi='" + anneAd.Text + "'," +
+                            "dogum_yeri='" + dogumYeri.Text + "',dogum_tarih='" + dogumTarihi.Value + "',kan_grubu='" + kanGrubu.Text + "'," +
+                            "medeni_hal='" + medeniHal.Text + "'where seri_no='" + seriNo.Text.ToString() + "' ");
 
                         MessageBox.Show("Nüfus bilgileri başarıyla güncellendi");
                         AnaSayfa anaSayfa = new AnaSayfa();

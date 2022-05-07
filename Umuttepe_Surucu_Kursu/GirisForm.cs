@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -30,19 +31,27 @@ namespace Umuttepe_Surucu_Kursu
 
         private void giris_Click(object sender, EventArgs e)
         {
-            if (KullanıcıAd.Text==""|| sifre.Text=="")
+            VeriBaglanti baglanti = new VeriBaglanti();
+
+            if (KullanıcıAd.Text==""|| sifre.Text.ToString()=="")
             {
                 MessageBox.Show("Şifre veya Kullanıcı Adı boş geçilemez!");
-            }
-            else if (KullanıcıAd.Text == "Bilişim" && sifre.Text == "1234")
-            {
-                AnaSayfa form1 = new AnaSayfa();
-                form1.Show();
-                Hide();
-            }
+            }            
             else
             {
-                MessageBox.Show("Şifre veya Kullanıcı Adı yanlış!");
+                SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from kullanici where kullanici_adi='" + KullanıcıAd.Text + "'and sifre='"+sifre.Text.ToString()+"'");
+                if (okuyucu.Read())
+                {
+                    MessageBox.Show("Giriş başarılı.");
+                    AnaSayfa giriş = new AnaSayfa();
+                    giriş.Show();
+                    Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Şifre veya Kullanıcı Adı hatalı.");
+                }
 
             }
         }

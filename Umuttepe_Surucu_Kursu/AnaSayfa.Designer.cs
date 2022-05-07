@@ -32,14 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
             this.PersonelBilgi = new System.Windows.Forms.Button();
             this.Odemeler = new System.Windows.Forms.Button();
             this.NotBilgileri = new System.Windows.Forms.Button();
@@ -48,7 +46,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -64,14 +61,12 @@
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.PersonelBilgi);
             this.panel1.Controls.Add(this.Odemeler);
             this.panel1.Controls.Add(this.NotBilgileri);
@@ -80,7 +75,7 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(882, 476);
+            this.panel1.Size = new System.Drawing.Size(882, 454);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox7
@@ -105,16 +100,6 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "ÇIKIŞ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.DarkRed;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(22, 372);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox6.TabIndex = 14;
-            this.pictureBox6.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -179,17 +164,6 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Umuttepe Sürücü Kursu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.DarkRed;
-            this.button6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button6.Location = new System.Drawing.Point(15, 368);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(135, 37);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "            LİSTEYİ YENİLE";
-            this.button6.UseVisualStyleBackColor = false;
             // 
             // PersonelBilgi
             // 
@@ -258,14 +232,14 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(14, 194);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(854, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 196);
             this.dataGridView1.TabIndex = 0;
             // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(884, 478);
+            this.ClientSize = new System.Drawing.Size(884, 456);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -276,7 +250,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -290,7 +263,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button PersonelBilgi;
         private System.Windows.Forms.Button Odemeler;
         private System.Windows.Forms.Button NotBilgileri;
@@ -304,7 +276,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label2;
     }
 }

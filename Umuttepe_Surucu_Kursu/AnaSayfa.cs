@@ -81,12 +81,7 @@ namespace Umuttepe_Surucu_Kursu
             Hide();
         }
 
-        private void KursiyerArama_Click(object sender, EventArgs e)
-        {
-            KursiyerArama f8 = new KursiyerArama();
-            f8.Show();
-            Hide();
-        }
+        
 
         private void AnaSayfa_Load(object sender, EventArgs e)
         {

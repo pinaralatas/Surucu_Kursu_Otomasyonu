@@ -21,11 +21,9 @@ namespace Umuttepe_Surucu_Kursu
         
         private void NotBilgileri_Load(object sender, EventArgs e)
         {
-            // TODO: Bu kod satırı 'surucu_kursuDataSet6.not_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            this.not_bilgileriTableAdapter2.Fill(this.surucu_kursuDataSet6.not_bilgileri);
-            // TODO: Bu kod satırı 'surucu_kursuDataSet4.not_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
-            //this.not_bilgileriTableAdapter1.Fill(this.surucu_kursuDataSet4.not_bilgileri);
-
+            // TODO: Bu kod satırı 'surucu_kursuDataSet12.aday_bilgileri' tablosuna veri yükler. Bunu gerektiği şekilde taşıyabilir, veya kaldırabilirsiniz.
+            this.aday_bilgileriTableAdapter.Fill(this.surucu_kursuDataSet12.aday_bilgileri);
+            
             panel2.BackColor = Color.FromArgb(100, 0, 0, 0);
            
         }
@@ -80,19 +78,19 @@ namespace Umuttepe_Surucu_Kursu
 
             try
             {
-                if (adayid.Text == "" || motorNot.Text == "" || trafikNot.Text == "")
+                if (tc.Text == "" || motorNot.Text == "" || trafikNot.Text == "")
                 {
-
+                    MessageBox.Show("Bütün boşlukları doldurunuz!!");
                 }
                 else
                 {              
                     
-                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from not_bilgileri where adayid='" + adayid.Text.ToString() + "'");
+                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text.ToString() + "'");
                     if (reader.HasRows)
                     {
                         baglanti.CloseConnection();
 
-                        baglanti.SqlProcess("update not_bilgileri SET trafik_sinav_notu='" + trafikNot.Text + "',motor_sinav_notu='" + motorNot.Text + "',sinav_tarihi='" + sinavTarihi.Value + "' where adayid='" + adayid.Text + "' ");
+                        baglanti.SqlProcess("update aday_bilgileri SET trafik_sinav_notu='" + trafikNot.Text + "',motor_sinav_notu='" + motorNot.Text + "',sinav_tarihi='" + sinavTarihi.Value + "' where tc='" + tc.Text + "' ");
 
                         MessageBox.Show("Not durumu başarıyla güncellendi");
                         AnaSayfa anaSayfa = new AnaSayfa();

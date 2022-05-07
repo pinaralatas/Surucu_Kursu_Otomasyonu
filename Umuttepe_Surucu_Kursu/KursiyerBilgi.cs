@@ -105,9 +105,12 @@ namespace Umuttepe_Surucu_Kursu
 
             try
             {
-                if (adayid.Text == "" || tc.Text == "" || ad.Text == "" || soyad.Text == "" || yas.Text == "" || telefon.Text == "" || saglik.Text == "" || adli.Text == "" || kayıtTarihi.Text == "" || ehliyetTur.Text == "" || ogrenim.Text == "")
+                if (adayid.Text == "" || tc.Text == "" || ad.Text == "" || soyad.Text == "" 
+                    || yas.Text == "" || telefon.Text == "" || saglik.Text == "" 
+                    || adli.Text == "" || kayıtTarihi.Text == "" || ehliyetTur.Text == ""
+                    || ogrenim.Text == "" || kurs_ucret.Text == "")
                 {
-
+                    MessageBox.Show("Lütfen boşlukları doldurunuz!!!");
                 }
                 else
                 {
@@ -119,16 +122,27 @@ namespace Umuttepe_Surucu_Kursu
                     }
                     else
                     {
-                        baglanti.SqlProcess("insert into nufus_bilgileri(seri_no)values('" + seri_no.Text + "') ");
-                        baglanti.SqlProcess("insert into not_bilgileri(adayid)values('" + adayid.Text + "') ");
-                        baglanti.SqlProcess("insert into aday_bilgileri(adayid,tc,ad,soyad,yas,telefon,saglik_raporu,adli_belge,kayit_tarihi,ehliyet_tur,ogrenim_durumu,seri_no)values('" + adayid.Text + "','" + tc.Text + "','" + ad.Text + "','" + soyad.Text + "','" + yas.Text + "','" + telefon.Text + "','" + saglik.Text + "','" + adli.Text + "','" + kayıtTarihi.Value + "','" +ehliyetTur.Text + "','" + ogrenim.Text + "','" + seri_no.Text + "')");
-                        
-                        MessageBox.Show("Bilgiler Başarıyla Güncellendi");
+                        if (telefon.TextLength < 10 || telefon.TextLength > 10)
+                        {
+                            MessageBox.Show("Lütfen 10 haneli telefon numaranızı giriniz!");
+                        }
+                        else
+                        {
+                            baglanti.SqlProcess("insert into borc(adayid,kalan_borc) values ('" + adayid.Text.ToString() + "','" + kurs_ucret.Text + "')");
+                            baglanti.SqlProcess("insert into nufus_bilgileri(seri_no) values ('" + seri_no.Text.ToString() + "')");
+                            baglanti.SqlProcess("insert into aday_bilgileri(adayid,tc,ad,soyad,yas,telefon,saglik_raporu,adli_belge,kayit_tarihi,ehliyet_tur,ogrenim_durumu,seri_no)" +
+                                "values('" + adayid.Text.ToString() + "','" + tc.Text + "','" + ad.Text + "','" + soyad.Text + "','" + yas.Text + "','" + telefon.Text.ToString() + "','" + saglik.Text + "'," +
+                                "'" + adli.Text + "','" + kayıtTarihi.Value + "','" + ehliyetTur.Text + "','" + ogrenim.Text + "','" + seri_no.Text.ToString() + "')");
 
 
-                        AnaSayfa f1 = new AnaSayfa();
-                        f1.Show();
-                        Hide();
+                            MessageBox.Show("Bilgiler Başarıyla Güncellendi");
+
+
+                            nufus_bilgi f1 = new nufus_bilgi();
+                            f1.Show();
+                            Hide();
+                        }
+                       
                     }
                 }
             }
@@ -151,19 +165,20 @@ namespace Umuttepe_Surucu_Kursu
                 }
                 else
                 {
-                    SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and adayid='" + adayid.Text + "'");
+                    SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and adayid='" + adayid.Text.ToString() + "'");
 
                     if (okuyucu.HasRows)
                     {
 
                         baglanti.CloseConnection();
-                        SqlDataReader okuyucu1 = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and seri_no='" + seri_no.Text + "'");
+                        SqlDataReader okuyucu1 = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and seri_no='" + seri_no.Text.ToString() + "'");
                         if (okuyucu1.HasRows)
                         {
                             baglanti.CloseConnection();
-                           //baglanti.SqlProcess("DELETE from not_bilgileri where adayid'" + adayid.Text.ToString() + "'");
-                            baglanti.SqlProcess("DELETE from nufus_bilgileri where seri_no='" + seri_no.Text.ToString() + "'");
                             baglanti.SqlProcess("DELETE from aday_bilgileri where tc='" + tc.Text.ToString() + "'");
+                            baglanti.SqlProcess("DELETE from nufus_bilgileri where seri_no='" + seri_no.Text.ToString() + "'");
+                            baglanti.SqlProcess("DELETE from borc where adayid='" + adayid.Text.ToString() + "'");
+                            
                             
                             
                             MessageBox.Show("Kullanıcı silindi!");

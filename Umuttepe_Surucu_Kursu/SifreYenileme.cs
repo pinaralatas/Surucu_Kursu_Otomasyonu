@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,32 +20,41 @@ namespace Umuttepe_Surucu_Kursu
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (kullanıcıAd.Text == "Bilişim")
+            VeriBaglanti baglanti = new VeriBaglanti();
+            SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from kullanici where kullanici_adi='" + kullanıcıAd.Text + "'");
+
+            try
             {
-
-                if (yeniSifre.Text == sifreTekrar.Text)
+                if (kullanıcıAd.Text==""||yeniSifre.Text.ToString()==""||sifreTekrar.Text.ToString()=="")
                 {
-                    MessageBox.Show("Şifreniz başarıyla güncellenmiştir");
-                    GirisForm f4 = new GirisForm();
-                    f4.Show();
-                    Hide();
-
+                    MessageBox.Show("Lütfen boş alan bırakmayınız!!");
                 }
                 else
                 {
-                    MessageBox.Show("Yazdığınız şifreler birbiriyle uyuşmamaktadır!");
+                    if (yeniSifre.Text.ToString() == sifreTekrar.Text.ToString())
+                    {
+                        baglanti.CloseConnection();
+                        baglanti.SqlProcess("update kullanici SET sifre='" + yeniSifre.Text.ToString() + "'where kullanici_adi='" + kullanıcıAd.Text + "'");
+                        MessageBox.Show("Şifre başarıyla güncellenmiştir");
+                        GirisForm f1 = new GirisForm();
+                        f1.Show();
+                        Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Girdiğiniz şifreler birbiriyle uyuşmamaktadır!!");
+                    }
+
                 }
-            }
-            else if (kullanıcıAd.Text=="")
-            {
-                MessageBox.Show("Kullanıcı adı boş geçilemez!");
 
             }
-            else
+            catch (Exception error)
             {
-                MessageBox.Show("Kullanıcı adını yanlış girdiniz!");
-                
+                MessageBox.Show("İşleminiz başarısız,lütfen tekrar deneyin!!");
+
+                throw;
             }
+
         }
 
         private void label4_Click(object sender, EventArgs e)

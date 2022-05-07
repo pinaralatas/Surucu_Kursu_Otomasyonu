@@ -56,6 +56,41 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>surucu_kursuDataSet10.xsd</DependentUpon>
     </Compile>
+    <Compile Include="surucu_kursuDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="surucu_kursuDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>surucu_kursuDataSet17.xsd</DependentUpon>
+    </Compile>
     <Compile Include="surucu_kursuDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -240,6 +275,83 @@
     </None>
     <None Include="surucu_kursuDataSet10.xss">
       <DependentUpon>surucu_kursuDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet11.xsc">
+      <DependentUpon>surucu_kursuDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet11.xss">
+      <DependentUpon>surucu_kursuDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet12.xsc">
+      <DependentUpon>surucu_kursuDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet12.xss">
+      <DependentUpon>surucu_kursuDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet13.xsc">
+      <DependentUpon>surucu_kursuDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet13.xss">
+      <DependentUpon>surucu_kursuDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet14.xsc">
+      <DependentUpon>surucu_kursuDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet14.xss">
+      <DependentUpon>surucu_kursuDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet15.xsc">
+      <DependentUpon>surucu_kursuDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet15.xss">
+      <DependentUpon>surucu_kursuDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet16.xsc">
+      <DependentUpon>surucu_kursuDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet16.xss">
+      <DependentUpon>surucu_kursuDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet17.xsc">
+      <DependentUpon>surucu_kursuDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="surucu_kursuDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>surucu_kursuDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="surucu_kursuDataSet17.xss">
+      <DependentUpon>surucu_kursuDataSet17.xsd</DependentUpon>
     </None>
     <None Include="surucu_kursuDataSet2.xsc">
       <DependentUpon>surucu_kursuDataSet2.xsd</DependentUpon>

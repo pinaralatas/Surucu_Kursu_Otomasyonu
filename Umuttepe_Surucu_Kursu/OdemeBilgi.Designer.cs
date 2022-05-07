@@ -127,6 +127,7 @@
             this.guncelle.TabIndex = 34;
             this.guncelle.Text = "       GÜNCELLE";
             this.guncelle.UseVisualStyleBackColor = true;
+            this.guncelle.Click += new System.EventHandler(this.guncelle_Click);
             // 
             // nakit
             // 
@@ -334,7 +335,7 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(44, 100);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 16);
+            this.label2.Size = new System.Drawing.Size(217, 16);
             this.label2.TabIndex = 19;
             this.label2.Text = "Kredi Kartı Bilgilerinizi Giriniz  :\r\n";
             // 

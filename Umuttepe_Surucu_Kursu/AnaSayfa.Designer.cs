@@ -30,10 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaSayfa));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.KursiyerArama = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -49,7 +47,6 @@
             this.AdayBilgileri = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -65,10 +62,8 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.pictureBox7);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.KursiyerArama);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.pictureBox5);
             this.panel1.Controls.Add(this.pictureBox4);
@@ -85,24 +80,14 @@
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(966, 476);
+            this.panel1.Size = new System.Drawing.Size(882, 476);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.DarkRed;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(807, 87);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(33, 29);
-            this.pictureBox10.TabIndex = 41;
-            this.pictureBox10.TabStop = false;
             // 
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(915, 16);
+            this.pictureBox7.Location = new System.Drawing.Point(819, 16);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(33, 29);
             this.pictureBox7.TabIndex = 15;
@@ -114,24 +99,12 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe Script", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(865, 18);
+            this.label2.Location = new System.Drawing.Point(769, 18);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 27);
             this.label2.TabIndex = 38;
             this.label2.Text = "ÇIKIŞ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // KursiyerArama
-            // 
-            this.KursiyerArama.BackColor = System.Drawing.Color.DarkRed;
-            this.KursiyerArama.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.KursiyerArama.Location = new System.Drawing.Point(798, 83);
-            this.KursiyerArama.Name = "KursiyerArama";
-            this.KursiyerArama.Size = new System.Drawing.Size(130, 37);
-            this.KursiyerArama.TabIndex = 5;
-            this.KursiyerArama.Text = "              KURSİYER                              ARAMA";
-            this.KursiyerArama.UseVisualStyleBackColor = false;
-            this.KursiyerArama.Click += new System.EventHandler(this.KursiyerArama_Click);
             // 
             // pictureBox6
             // 
@@ -147,7 +120,7 @@
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(665, 87);
+            this.pictureBox5.Location = new System.Drawing.Point(693, 87);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(33, 29);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -158,7 +131,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(503, 87);
+            this.pictureBox4.Location = new System.Drawing.Point(531, 87);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(33, 29);
             this.pictureBox4.TabIndex = 12;
@@ -168,7 +141,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(344, 87);
+            this.pictureBox3.Location = new System.Drawing.Point(372, 87);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(33, 29);
             this.pictureBox3.TabIndex = 11;
@@ -178,7 +151,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(186, 87);
+            this.pictureBox2.Location = new System.Drawing.Point(214, 87);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 29);
             this.pictureBox2.TabIndex = 10;
@@ -188,7 +161,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.DarkRed;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 87);
+            this.pictureBox1.Location = new System.Drawing.Point(64, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 29);
             this.pictureBox1.TabIndex = 9;
@@ -200,9 +173,9 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 18F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(342, 13);
+            this.label1.Location = new System.Drawing.Point(307, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(291, 32);
+            this.label1.Size = new System.Drawing.Size(290, 32);
             this.label1.TabIndex = 8;
             this.label1.Text = "Umuttepe Sürücü Kursu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,7 +195,7 @@
             // 
             this.PersonelBilgi.BackColor = System.Drawing.Color.DarkRed;
             this.PersonelBilgi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PersonelBilgi.Location = new System.Drawing.Point(646, 83);
+            this.PersonelBilgi.Location = new System.Drawing.Point(674, 83);
             this.PersonelBilgi.Name = "PersonelBilgi";
             this.PersonelBilgi.Size = new System.Drawing.Size(136, 37);
             this.PersonelBilgi.TabIndex = 5;
@@ -234,7 +207,7 @@
             // 
             this.Odemeler.BackColor = System.Drawing.Color.DarkRed;
             this.Odemeler.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Odemeler.Location = new System.Drawing.Point(492, 83);
+            this.Odemeler.Location = new System.Drawing.Point(520, 83);
             this.Odemeler.Name = "Odemeler";
             this.Odemeler.Size = new System.Drawing.Size(138, 37);
             this.Odemeler.TabIndex = 4;
@@ -246,7 +219,7 @@
             // 
             this.NotBilgileri.BackColor = System.Drawing.Color.DarkRed;
             this.NotBilgileri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NotBilgileri.Location = new System.Drawing.Point(335, 83);
+            this.NotBilgileri.Location = new System.Drawing.Point(363, 83);
             this.NotBilgileri.Name = "NotBilgileri";
             this.NotBilgileri.Size = new System.Drawing.Size(142, 37);
             this.NotBilgileri.TabIndex = 3;
@@ -258,7 +231,7 @@
             // 
             this.NufusBilgileri.BackColor = System.Drawing.Color.DarkRed;
             this.NufusBilgileri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.NufusBilgileri.Location = new System.Drawing.Point(177, 83);
+            this.NufusBilgileri.Location = new System.Drawing.Point(205, 83);
             this.NufusBilgileri.Name = "NufusBilgileri";
             this.NufusBilgileri.Size = new System.Drawing.Size(145, 37);
             this.NufusBilgileri.TabIndex = 2;
@@ -271,7 +244,7 @@
             this.AdayBilgileri.BackColor = System.Drawing.Color.DarkRed;
             this.AdayBilgileri.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.AdayBilgileri.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AdayBilgileri.Location = new System.Drawing.Point(32, 83);
+            this.AdayBilgileri.Location = new System.Drawing.Point(60, 83);
             this.AdayBilgileri.Name = "AdayBilgileri";
             this.AdayBilgileri.Size = new System.Drawing.Size(130, 37);
             this.AdayBilgileri.TabIndex = 1;
@@ -283,16 +256,16 @@
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 194);
+            this.dataGridView1.Location = new System.Drawing.Point(14, 194);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(932, 158);
+            this.dataGridView1.Size = new System.Drawing.Size(854, 158);
             this.dataGridView1.TabIndex = 0;
             // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 478);
+            this.ClientSize = new System.Drawing.Size(884, 478);
             this.ControlBox = false;
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -302,7 +275,6 @@
             this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
@@ -333,9 +305,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Button KursiyerArama;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }
 

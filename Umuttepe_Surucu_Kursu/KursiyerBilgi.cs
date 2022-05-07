@@ -151,16 +151,31 @@ namespace Umuttepe_Surucu_Kursu
                 }
                 else
                 {
-                    SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'");
+                    SqlDataReader okuyucu = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and adayid='" + adayid.Text + "'");
+
                     if (okuyucu.HasRows)
                     {
+
                         baglanti.CloseConnection();
-                        baglanti.SqlProcess("DELETE from aday_bilgileri where tc='" + tc.Text + "'");
-                        baglanti.SqlProcess("DELETE from not_bilgileri where tc'" + tc.Text + "'");
-                        MessageBox.Show("Kullanıcı silindi!");
-                        AnaSayfa anaSayfa = new AnaSayfa();
-                        anaSayfa.Show(this);
-                        Hide();
+                        SqlDataReader okuyucu1 = baglanti.VeriOkuyucu("select  * from aday_bilgileri where tc='" + tc.Text + "'and seri_no='" + seri_no.Text + "'");
+                        if (okuyucu1.HasRows)
+                        {
+                            baglanti.CloseConnection();
+                           //baglanti.SqlProcess("DELETE from not_bilgileri where adayid'" + adayid.Text.ToString() + "'");
+                            baglanti.SqlProcess("DELETE from nufus_bilgileri where seri_no='" + seri_no.Text.ToString() + "'");
+                            baglanti.SqlProcess("DELETE from aday_bilgileri where tc='" + tc.Text.ToString() + "'");
+                            
+                            
+                            MessageBox.Show("Kullanıcı silindi!");
+                            AnaSayfa anaSayfa = new AnaSayfa();
+                            anaSayfa.Show(this);
+                            Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+                        }
+                       
                     }
                     else
                     {

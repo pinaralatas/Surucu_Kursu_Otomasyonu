@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+
 
 namespace Umuttepe_Surucu_Kursu
 {
@@ -16,10 +17,7 @@ namespace Umuttepe_Surucu_Kursu
         public OdemeBilgi()
         {
             InitializeComponent();
-        }
-
-        MySqlConnectionStringBuilder build = new MySqlConnectionStringBuilder();
-        MySqlConnection baglanti;
+        }     
 
         private void OdemeBilgi_Load(object sender, EventArgs e)
         {
@@ -42,25 +40,8 @@ namespace Umuttepe_Surucu_Kursu
 
             panel3.BackColor = Color.FromArgb(150, 0, 0, 0);
 
-            build.Server = "localhost";
-            build.UserID = "root";
-            build.Password = "Donki6612.";
-            build.Database = "Umuttepe_Surucu_Kursu";
-            baglanti = new MySqlConnection(build.ToString());
-            Listele_Ara("Select*from odeme_bılgılerı");
         }
-
-        public DataTable Listele_Ara(string sql)
-        {
-            DataTable tbl = new DataTable();
-            baglanti.Open();
-            MySqlDataAdapter adtr = new MySqlDataAdapter(sql, baglanti);
-            adtr.Fill(tbl);
-            dataGridView1.DataSource = tbl;
-            baglanti.Close();
-
-            return tbl;
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -148,6 +129,47 @@ namespace Umuttepe_Surucu_Kursu
         {
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                  && !char.IsSeparator(e.KeyChar);
+        }
+
+        private void guncelle_Click(object sender, EventArgs e)
+        {
+            VeriBaglanti baglanti = new VeriBaglanti();
+
+            try
+            {
+                if (kartNo.Text == "" || kartAd.Text == "" || kartSoyad.Text == "" || kartSoyad.Text == "" || cvv.Text == "" || ay.Text == "" || yıl.Text == "")
+                {
+
+                }
+                else
+                {
+
+                    SqlDataReader reader = baglanti.VeriOkuyucu("select  * from odeme_bilgileri where tc='" + tc.Text.ToString() + "'");
+                    if (reader.HasRows)
+                    {
+                        baglanti.CloseConnection();
+
+                        baglanti.SqlProcess("update odeme_bilgileri SET cvv='" + cvv.Text + "',kart_sahibinin_adi='" + kartAd.Text + "',kart_sahibinin_soyadi='" + kartSoyad.Text + "',son_ay='" + ay.Text + "',son_yil='" + yıl.Text + "',tc='" + tc.Text + "' where kart_no='" + kartNo.Text + "' ");
+
+                        MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
+                        AnaSayfa anaSayfa = new AnaSayfa();
+                        anaSayfa.Show(this);
+                        Hide();
+                        //idodeme_tur için formda doldurulması gereken alan yok?
+                    }
+                    else
+                    {
+                        MessageBox.Show("Böyle bir kullanıcı bulunamadı!!");
+                    }
+
+
+                }
+            }
+            catch (Exception error)
+            {
+
+                MessageBox.Show("İşlem Sırasında Hata Oluştu." + error.Message);
+            }
         }
     }
 }

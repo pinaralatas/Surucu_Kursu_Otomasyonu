@@ -124,12 +124,6 @@
     <Compile Include="PersonelBilgi.Designer.cs">
       <DependentUpon>PersonelBilgi.cs</DependentUpon>
     </Compile>
-    <Compile Include="KursiyerArama.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="KursiyerArama.Designer.cs">
-      <DependentUpon>KursiyerArama.cs</DependentUpon>
-    </Compile>
     <Compile Include="SifreYenileme.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PersonelBilgi.resx">
       <DependentUpon>PersonelBilgi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="KursiyerArama.resx">
-      <DependentUpon>KursiyerArama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SifreYenileme.resx">
       <DependentUpon>SifreYenileme.cs</DependentUpon>

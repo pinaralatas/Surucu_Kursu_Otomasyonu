@@ -48,13 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.serinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.babaadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anneadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogumyeriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dogumtarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kangrubuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medenihalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nufusbilgileriBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.surucu_kursuDataSet9 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet9();
             this.button3 = new System.Windows.Forms.Button();
@@ -66,6 +59,13 @@
             this.nufusbilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nufus_bilgileriTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet8TableAdapters.nufus_bilgileriTableAdapter();
             this.nufus_bilgileriTableAdapter1 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet9TableAdapters.nufus_bilgileriTableAdapter();
+            this.serinoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.babaadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anneadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumyeriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dogumtarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kangrubuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medenihalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -284,48 +284,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(601, 137);
             this.dataGridView1.TabIndex = 1;
             // 
-            // serinoDataGridViewTextBoxColumn
-            // 
-            this.serinoDataGridViewTextBoxColumn.DataPropertyName = "seri_no";
-            this.serinoDataGridViewTextBoxColumn.HeaderText = "seri_no";
-            this.serinoDataGridViewTextBoxColumn.Name = "serinoDataGridViewTextBoxColumn";
-            // 
-            // babaadiDataGridViewTextBoxColumn
-            // 
-            this.babaadiDataGridViewTextBoxColumn.DataPropertyName = "baba_adi";
-            this.babaadiDataGridViewTextBoxColumn.HeaderText = "baba_adi";
-            this.babaadiDataGridViewTextBoxColumn.Name = "babaadiDataGridViewTextBoxColumn";
-            // 
-            // anneadiDataGridViewTextBoxColumn
-            // 
-            this.anneadiDataGridViewTextBoxColumn.DataPropertyName = "anne_adi";
-            this.anneadiDataGridViewTextBoxColumn.HeaderText = "anne_adi";
-            this.anneadiDataGridViewTextBoxColumn.Name = "anneadiDataGridViewTextBoxColumn";
-            // 
-            // dogumyeriDataGridViewTextBoxColumn
-            // 
-            this.dogumyeriDataGridViewTextBoxColumn.DataPropertyName = "dogum_yeri";
-            this.dogumyeriDataGridViewTextBoxColumn.HeaderText = "dogum_yeri";
-            this.dogumyeriDataGridViewTextBoxColumn.Name = "dogumyeriDataGridViewTextBoxColumn";
-            // 
-            // dogumtarihDataGridViewTextBoxColumn
-            // 
-            this.dogumtarihDataGridViewTextBoxColumn.DataPropertyName = "dogum_tarih";
-            this.dogumtarihDataGridViewTextBoxColumn.HeaderText = "dogum_tarih";
-            this.dogumtarihDataGridViewTextBoxColumn.Name = "dogumtarihDataGridViewTextBoxColumn";
-            // 
-            // kangrubuDataGridViewTextBoxColumn
-            // 
-            this.kangrubuDataGridViewTextBoxColumn.DataPropertyName = "kan_grubu";
-            this.kangrubuDataGridViewTextBoxColumn.HeaderText = "kan_grubu";
-            this.kangrubuDataGridViewTextBoxColumn.Name = "kangrubuDataGridViewTextBoxColumn";
-            // 
-            // medenihalDataGridViewTextBoxColumn
-            // 
-            this.medenihalDataGridViewTextBoxColumn.DataPropertyName = "medeni_hal";
-            this.medenihalDataGridViewTextBoxColumn.HeaderText = "medeni_hal";
-            this.medenihalDataGridViewTextBoxColumn.Name = "medenihalDataGridViewTextBoxColumn";
-            // 
             // nufusbilgileriBindingSource1
             // 
             this.nufusbilgileriBindingSource1.DataMember = "nufus_bilgileri";
@@ -406,6 +364,48 @@
             // nufus_bilgileriTableAdapter1
             // 
             this.nufus_bilgileriTableAdapter1.ClearBeforeFill = true;
+            // 
+            // serinoDataGridViewTextBoxColumn
+            // 
+            this.serinoDataGridViewTextBoxColumn.DataPropertyName = "seri_no";
+            this.serinoDataGridViewTextBoxColumn.HeaderText = "Seri No";
+            this.serinoDataGridViewTextBoxColumn.Name = "serinoDataGridViewTextBoxColumn";
+            // 
+            // babaadiDataGridViewTextBoxColumn
+            // 
+            this.babaadiDataGridViewTextBoxColumn.DataPropertyName = "baba_adi";
+            this.babaadiDataGridViewTextBoxColumn.HeaderText = "Baba Adı";
+            this.babaadiDataGridViewTextBoxColumn.Name = "babaadiDataGridViewTextBoxColumn";
+            // 
+            // anneadiDataGridViewTextBoxColumn
+            // 
+            this.anneadiDataGridViewTextBoxColumn.DataPropertyName = "anne_adi";
+            this.anneadiDataGridViewTextBoxColumn.HeaderText = "Anne Adı";
+            this.anneadiDataGridViewTextBoxColumn.Name = "anneadiDataGridViewTextBoxColumn";
+            // 
+            // dogumyeriDataGridViewTextBoxColumn
+            // 
+            this.dogumyeriDataGridViewTextBoxColumn.DataPropertyName = "dogum_yeri";
+            this.dogumyeriDataGridViewTextBoxColumn.HeaderText = "Doğum Yeri";
+            this.dogumyeriDataGridViewTextBoxColumn.Name = "dogumyeriDataGridViewTextBoxColumn";
+            // 
+            // dogumtarihDataGridViewTextBoxColumn
+            // 
+            this.dogumtarihDataGridViewTextBoxColumn.DataPropertyName = "dogum_tarih";
+            this.dogumtarihDataGridViewTextBoxColumn.HeaderText = "Doğum Tarihi";
+            this.dogumtarihDataGridViewTextBoxColumn.Name = "dogumtarihDataGridViewTextBoxColumn";
+            // 
+            // kangrubuDataGridViewTextBoxColumn
+            // 
+            this.kangrubuDataGridViewTextBoxColumn.DataPropertyName = "kan_grubu";
+            this.kangrubuDataGridViewTextBoxColumn.HeaderText = "Kan Grubu";
+            this.kangrubuDataGridViewTextBoxColumn.Name = "kangrubuDataGridViewTextBoxColumn";
+            // 
+            // medenihalDataGridViewTextBoxColumn
+            // 
+            this.medenihalDataGridViewTextBoxColumn.DataPropertyName = "medeni_hal";
+            this.medenihalDataGridViewTextBoxColumn.HeaderText = "Medeni Hâl";
+            this.medenihalDataGridViewTextBoxColumn.Name = "medenihalDataGridViewTextBoxColumn";
             // 
             // nufus_bilgi
             // 

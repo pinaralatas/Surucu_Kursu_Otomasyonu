@@ -44,12 +44,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinavtarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.trafiksinavnotuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.motorsinavnotuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adaybilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.surucu_kursuDataSet12 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet12();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -67,6 +61,12 @@
             this.not_bilgileriTableAdapter1 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet4TableAdapters.not_bilgileriTableAdapter();
             this.not_bilgileriTableAdapter2 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet6TableAdapters.not_bilgileriTableAdapter();
             this.aday_bilgileriTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet12TableAdapters.aday_bilgileriTableAdapter();
+            this.tcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinavtarihiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trafiksinavnotuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.motorsinavnotuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -130,7 +130,7 @@
             // 
             // tc
             // 
-            this.tc.Location = new System.Drawing.Point(379, 36);
+            this.tc.Location = new System.Drawing.Point(376, 36);
             this.tc.Name = "tc";
             this.tc.Size = new System.Drawing.Size(100, 20);
             this.tc.TabIndex = 12;
@@ -212,18 +212,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(266, 71);
+            this.label2.Location = new System.Drawing.Point(223, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 16);
+            this.label2.Size = new System.Drawing.Size(152, 16);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Sınav Tarihi  :";
+            this.label2.Text = "Trafik Sınav Tarihi  :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(280, 34);
+            this.label1.Location = new System.Drawing.Point(334, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 1;
@@ -246,42 +246,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(746, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tcDataGridViewTextBoxColumn
-            // 
-            this.tcDataGridViewTextBoxColumn.DataPropertyName = "tc";
-            this.tcDataGridViewTextBoxColumn.HeaderText = "tc";
-            this.tcDataGridViewTextBoxColumn.Name = "tcDataGridViewTextBoxColumn";
-            // 
-            // adDataGridViewTextBoxColumn
-            // 
-            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
-            this.adDataGridViewTextBoxColumn.HeaderText = "ad";
-            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
-            // 
-            // soyadDataGridViewTextBoxColumn
-            // 
-            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
-            this.soyadDataGridViewTextBoxColumn.HeaderText = "soyad";
-            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
-            // 
-            // sinavtarihiDataGridViewTextBoxColumn
-            // 
-            this.sinavtarihiDataGridViewTextBoxColumn.DataPropertyName = "sinav_tarihi";
-            this.sinavtarihiDataGridViewTextBoxColumn.HeaderText = "sinav_tarihi";
-            this.sinavtarihiDataGridViewTextBoxColumn.Name = "sinavtarihiDataGridViewTextBoxColumn";
-            // 
-            // trafiksinavnotuDataGridViewTextBoxColumn
-            // 
-            this.trafiksinavnotuDataGridViewTextBoxColumn.DataPropertyName = "trafik_sinav_notu";
-            this.trafiksinavnotuDataGridViewTextBoxColumn.HeaderText = "trafik_sinav_notu";
-            this.trafiksinavnotuDataGridViewTextBoxColumn.Name = "trafiksinavnotuDataGridViewTextBoxColumn";
-            // 
-            // motorsinavnotuDataGridViewTextBoxColumn
-            // 
-            this.motorsinavnotuDataGridViewTextBoxColumn.DataPropertyName = "motor_sinav_notu";
-            this.motorsinavnotuDataGridViewTextBoxColumn.HeaderText = "motor_sinav_notu";
-            this.motorsinavnotuDataGridViewTextBoxColumn.Name = "motorsinavnotuDataGridViewTextBoxColumn";
             // 
             // adaybilgileriBindingSource
             // 
@@ -372,6 +336,42 @@
             // aday_bilgileriTableAdapter
             // 
             this.aday_bilgileriTableAdapter.ClearBeforeFill = true;
+            // 
+            // tcDataGridViewTextBoxColumn
+            // 
+            this.tcDataGridViewTextBoxColumn.DataPropertyName = "tc";
+            this.tcDataGridViewTextBoxColumn.HeaderText = "Aday T.C";
+            this.tcDataGridViewTextBoxColumn.Name = "tcDataGridViewTextBoxColumn";
+            // 
+            // adDataGridViewTextBoxColumn
+            // 
+            this.adDataGridViewTextBoxColumn.DataPropertyName = "ad";
+            this.adDataGridViewTextBoxColumn.HeaderText = "Ad";
+            this.adDataGridViewTextBoxColumn.Name = "adDataGridViewTextBoxColumn";
+            // 
+            // soyadDataGridViewTextBoxColumn
+            // 
+            this.soyadDataGridViewTextBoxColumn.DataPropertyName = "soyad";
+            this.soyadDataGridViewTextBoxColumn.HeaderText = "Soyad";
+            this.soyadDataGridViewTextBoxColumn.Name = "soyadDataGridViewTextBoxColumn";
+            // 
+            // sinavtarihiDataGridViewTextBoxColumn
+            // 
+            this.sinavtarihiDataGridViewTextBoxColumn.DataPropertyName = "sinav_tarihi";
+            this.sinavtarihiDataGridViewTextBoxColumn.HeaderText = "Trafik Sınav Tarihi";
+            this.sinavtarihiDataGridViewTextBoxColumn.Name = "sinavtarihiDataGridViewTextBoxColumn";
+            // 
+            // trafiksinavnotuDataGridViewTextBoxColumn
+            // 
+            this.trafiksinavnotuDataGridViewTextBoxColumn.DataPropertyName = "trafik_sinav_notu";
+            this.trafiksinavnotuDataGridViewTextBoxColumn.HeaderText = "Trafik Sınav Notu";
+            this.trafiksinavnotuDataGridViewTextBoxColumn.Name = "trafiksinavnotuDataGridViewTextBoxColumn";
+            // 
+            // motorsinavnotuDataGridViewTextBoxColumn
+            // 
+            this.motorsinavnotuDataGridViewTextBoxColumn.DataPropertyName = "motor_sinav_notu";
+            this.motorsinavnotuDataGridViewTextBoxColumn.HeaderText = "Motor Sınav Notu";
+            this.motorsinavnotuDataGridViewTextBoxColumn.Name = "motorsinavnotuDataGridViewTextBoxColumn";
             // 
             // NotBilgileri
             // 

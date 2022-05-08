@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OdemeBilgi));
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.borcBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.surucu_kursuDataSet13 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet13();
+            this.borcBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.surucu_kursuDataSet14 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet14();
             this.panel3 = new System.Windows.Forms.Panel();
             this.adayid = new System.Windows.Forms.TextBox();
             this.odenecek_miktar = new System.Windows.Forms.TextBox();
@@ -58,12 +58,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.borcBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.surucu_kursuDataSet13 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet13();
             this.odemebilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.surucu_kursuDataSet11 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet11();
             this.odeme_bilgileriTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet11TableAdapters.odeme_bilgileriTableAdapter();
             this.borcTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet13TableAdapters.borcTableAdapter();
-            this.surucu_kursuDataSet14 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet14();
-            this.borcBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.borcTableAdapter1 = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet14TableAdapters.borcTableAdapter();
             this.adayidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kalanborcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,15 +77,15 @@
             this.sonyilDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet14)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.odemebilgileriBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -123,15 +123,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(740, 119);
             this.dataGridView1.TabIndex = 4;
             // 
-            // borcBindingSource
+            // borcBindingSource1
             // 
-            this.borcBindingSource.DataMember = "borc";
-            this.borcBindingSource.DataSource = this.surucu_kursuDataSet13;
+            this.borcBindingSource1.DataMember = "borc";
+            this.borcBindingSource1.DataSource = this.surucu_kursuDataSet14;
             // 
-            // surucu_kursuDataSet13
+            // surucu_kursuDataSet14
             // 
-            this.surucu_kursuDataSet13.DataSetName = "surucu_kursuDataSet13";
-            this.surucu_kursuDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.surucu_kursuDataSet14.DataSetName = "surucu_kursuDataSet14";
+            this.surucu_kursuDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel3
             // 
@@ -182,7 +182,7 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(409, 19);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(140, 16);
+            this.label11.Size = new System.Drawing.Size(146, 16);
             this.label11.TabIndex = 45;
             this.label11.Text = "Ödenecek Miktar   :";
             // 
@@ -442,6 +442,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Adayın Ödeme Bilgilerini Giriniz";
             // 
+            // borcBindingSource
+            // 
+            this.borcBindingSource.DataMember = "borc";
+            this.borcBindingSource.DataSource = this.surucu_kursuDataSet13;
+            // 
+            // surucu_kursuDataSet13
+            // 
+            this.surucu_kursuDataSet13.DataSetName = "surucu_kursuDataSet13";
+            this.surucu_kursuDataSet13.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // odemebilgileriBindingSource
             // 
             this.odemebilgileriBindingSource.DataMember = "odeme_bilgileri";
@@ -460,16 +470,6 @@
             // 
             this.borcTableAdapter.ClearBeforeFill = true;
             // 
-            // surucu_kursuDataSet14
-            // 
-            this.surucu_kursuDataSet14.DataSetName = "surucu_kursuDataSet14";
-            this.surucu_kursuDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // borcBindingSource1
-            // 
-            this.borcBindingSource1.DataMember = "borc";
-            this.borcBindingSource1.DataSource = this.surucu_kursuDataSet14;
-            // 
             // borcTableAdapter1
             // 
             this.borcTableAdapter1.ClearBeforeFill = true;
@@ -477,7 +477,7 @@
             // adayidDataGridViewTextBoxColumn
             // 
             this.adayidDataGridViewTextBoxColumn.DataPropertyName = "adayid";
-            this.adayidDataGridViewTextBoxColumn.HeaderText = "adayid";
+            this.adayidDataGridViewTextBoxColumn.HeaderText = "Aday ID";
             this.adayidDataGridViewTextBoxColumn.Name = "adayidDataGridViewTextBoxColumn";
             // 
             // kalanborcDataGridViewTextBoxColumn
@@ -489,31 +489,31 @@
             // sonodenentutarDataGridViewTextBoxColumn
             // 
             this.sonodenentutarDataGridViewTextBoxColumn.DataPropertyName = "son_odenen_tutar";
-            this.sonodenentutarDataGridViewTextBoxColumn.HeaderText = "son_odenen_tutar";
+            this.sonodenentutarDataGridViewTextBoxColumn.HeaderText = "Son Ödenen Tutar";
             this.sonodenentutarDataGridViewTextBoxColumn.Name = "sonodenentutarDataGridViewTextBoxColumn";
             // 
             // sonodemeturuDataGridViewTextBoxColumn
             // 
             this.sonodemeturuDataGridViewTextBoxColumn.DataPropertyName = "son_odeme_turu";
-            this.sonodemeturuDataGridViewTextBoxColumn.HeaderText = "son_odeme_turu";
+            this.sonodemeturuDataGridViewTextBoxColumn.HeaderText = "Son Ödeme Türü";
             this.sonodemeturuDataGridViewTextBoxColumn.Name = "sonodemeturuDataGridViewTextBoxColumn";
             // 
             // kartnoDataGridViewTextBoxColumn
             // 
             this.kartnoDataGridViewTextBoxColumn.DataPropertyName = "kart_no";
-            this.kartnoDataGridViewTextBoxColumn.HeaderText = "kart_no";
+            this.kartnoDataGridViewTextBoxColumn.HeaderText = "Kart No";
             this.kartnoDataGridViewTextBoxColumn.Name = "kartnoDataGridViewTextBoxColumn";
             // 
             // kartsahibininadiDataGridViewTextBoxColumn
             // 
             this.kartsahibininadiDataGridViewTextBoxColumn.DataPropertyName = "kart_sahibinin_adi";
-            this.kartsahibininadiDataGridViewTextBoxColumn.HeaderText = "kart_sahibinin_adi";
+            this.kartsahibininadiDataGridViewTextBoxColumn.HeaderText = "Kart Sahibinin  Adı";
             this.kartsahibininadiDataGridViewTextBoxColumn.Name = "kartsahibininadiDataGridViewTextBoxColumn";
             // 
             // kartsahibininsoyadDataGridViewTextBoxColumn
             // 
             this.kartsahibininsoyadDataGridViewTextBoxColumn.DataPropertyName = "kart_sahibinin_soyad";
-            this.kartsahibininsoyadDataGridViewTextBoxColumn.HeaderText = "kart_sahibinin_soyad";
+            this.kartsahibininsoyadDataGridViewTextBoxColumn.HeaderText = "Kart Sahibinin Soyadı";
             this.kartsahibininsoyadDataGridViewTextBoxColumn.Name = "kartsahibininsoyadDataGridViewTextBoxColumn";
             // 
             // cvvDataGridViewTextBoxColumn
@@ -525,13 +525,13 @@
             // sonayDataGridViewTextBoxColumn
             // 
             this.sonayDataGridViewTextBoxColumn.DataPropertyName = "son_ay";
-            this.sonayDataGridViewTextBoxColumn.HeaderText = "son_ay";
+            this.sonayDataGridViewTextBoxColumn.HeaderText = "Kart ay";
             this.sonayDataGridViewTextBoxColumn.Name = "sonayDataGridViewTextBoxColumn";
             // 
             // sonyilDataGridViewTextBoxColumn
             // 
             this.sonyilDataGridViewTextBoxColumn.DataPropertyName = "son_yil";
-            this.sonyilDataGridViewTextBoxColumn.HeaderText = "son_yil";
+            this.sonyilDataGridViewTextBoxColumn.HeaderText = "Kart yıl";
             this.sonyilDataGridViewTextBoxColumn.Name = "sonyilDataGridViewTextBoxColumn";
             // 
             // OdemeBilgi
@@ -548,16 +548,16 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet14)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.odemebilgileriBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surucu_kursuDataSet14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.borcBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

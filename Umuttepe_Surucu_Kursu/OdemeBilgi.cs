@@ -158,17 +158,26 @@ namespace Umuttepe_Surucu_Kursu
                         if (reader.HasRows)
                         {
                             baglanti.CloseConnection();
+                            SqlDataReader reader1 = baglanti.VeriOkuyucu("select  * from borc where adayid='" + adayid.Text.ToString() + "'and kalan_borc+1>'" + Convert.ToInt32(odenecek_miktar.Text) + "'");
+                            if (reader1.HasRows)
+                            {
+                                baglanti.SqlProcess("update borc SET cvv='" + cvv.Text + "'," +
+                                                               "kart_sahibinin_adi='" + kartAd.Text + "'," +
+                                                               "kart_sahibinin_soyad='" + kartSoyad.Text + "'," +
+                                                               "son_ay='" + ay.Text + "',son_yil='" + yıl.Text + "'," +
+                                                               "kart_no='" + kartNo.Text.ToString() + "',son_odenen_tutar='" + odenecek_miktar.Text + "',kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), son_odeme_turu='Kredi Kartı' where adayid='" + adayid.Text.ToString() + "' ");
 
-                            baglanti.SqlProcess("update borc SET cvv='" + cvv.Text + "'," +
-                                "kart_sahibinin_adi='" + kartAd.Text + "'," +
-                                "kart_sahibinin_soyad='" + kartSoyad.Text + "'," +
-                                "son_ay='" + ay.Text + "',son_yil='" + yıl.Text + "'," +
-                                "kart_no='" + kartNo.Text.ToString() + "',son_odenen_tutar='" + odenecek_miktar.Text + "',kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), son_odeme_turu='Kredi Kartı' where adayid='" + adayid.Text.ToString() + "' ");
+                                MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
+                                AnaSayfa anaSayfa = new AnaSayfa();
+                                anaSayfa.Show(this);
+                                Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kalan borç ödenicek miktardan az olamaz!!!");
+                            }
 
-                            MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
-                            AnaSayfa anaSayfa = new AnaSayfa();
-                            anaSayfa.Show(this);
-                            Hide();
+                           
 
                         }
                         else
@@ -193,16 +202,25 @@ namespace Umuttepe_Surucu_Kursu
 
                         if (reader.HasRows)
                         {
+                          
                             baglanti.CloseConnection();
-
-                            baglanti.SqlProcess("update borc SET son_odenen_tutar='" + odenecek_miktar.Text + "',kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), son_odeme_turu='Nakit' where adayid='" + adayid.Text.ToString() + "' ");
-
-                            //  kullanıcı bulunamadı hatası!! tc yi foreign key olarak almak yerine adayid gibi mi alınmalı başka bir şey??
-                            MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
-                            AnaSayfa anaSayfa = new AnaSayfa();
-                            anaSayfa.Show(this);
-                            Hide();
-
+                            SqlDataReader reader1 = baglanti.VeriOkuyucu("select  * from borc where adayid='" + adayid.Text.ToString() + "'and kalan_borc+1>'"+Convert.ToInt32(odenecek_miktar.Text)+"'");
+                            if (reader1.HasRows)
+                            {
+                                baglanti.CloseConnection();
+                                baglanti.SqlProcess("update borc SET son_odenen_tutar='" + odenecek_miktar.Text + "'," +
+                                "kalan_borc=(kalan_borc-'" + odenecek_miktar.Text + "'), " +
+                                "son_odeme_turu='Nakit' where adayid='" + adayid.Text.ToString() + "' ");
+                                MessageBox.Show("Ödeme bilgileri başarıyla güncellendi");
+                                AnaSayfa anaSayfa = new AnaSayfa();
+                                anaSayfa.Show(this);
+                                Hide();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Kalan borç ödenicek miktardan az olamaz!!!");
+                            }
+                            
                         }
                         else
                         {

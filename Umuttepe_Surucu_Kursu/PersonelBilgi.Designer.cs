@@ -32,13 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelBilgi));
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pertcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peradDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.persoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gorevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personelbilgileriBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.surucu_kursuDataSet = new Umuttepe_Surucu_Kursu.surucu_kursuDataSet();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -64,6 +57,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.personel_bilgileriTableAdapter = new Umuttepe_Surucu_Kursu.surucu_kursuDataSetTableAdapters.personel_bilgileriTableAdapter();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pertcDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peradDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.persoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.epostaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gorevDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelbilgileriBindingSource)).BeginInit();
@@ -98,53 +99,11 @@
             this.adresDataGridViewTextBoxColumn,
             this.telefonDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.personelbilgileriBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 294);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 294);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(784, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 150);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // pertcDataGridViewTextBoxColumn
-            // 
-            this.pertcDataGridViewTextBoxColumn.DataPropertyName = "per_tc";
-            this.pertcDataGridViewTextBoxColumn.HeaderText = "per_tc";
-            this.pertcDataGridViewTextBoxColumn.Name = "pertcDataGridViewTextBoxColumn";
-            // 
-            // peradDataGridViewTextBoxColumn
-            // 
-            this.peradDataGridViewTextBoxColumn.DataPropertyName = "per_ad";
-            this.peradDataGridViewTextBoxColumn.HeaderText = "per_ad";
-            this.peradDataGridViewTextBoxColumn.Name = "peradDataGridViewTextBoxColumn";
-            // 
-            // persoyadDataGridViewTextBoxColumn
-            // 
-            this.persoyadDataGridViewTextBoxColumn.DataPropertyName = "per_soyad";
-            this.persoyadDataGridViewTextBoxColumn.HeaderText = "per_soyad";
-            this.persoyadDataGridViewTextBoxColumn.Name = "persoyadDataGridViewTextBoxColumn";
-            // 
-            // epostaDataGridViewTextBoxColumn
-            // 
-            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "e_posta";
-            this.epostaDataGridViewTextBoxColumn.HeaderText = "e_posta";
-            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
-            // 
-            // gorevDataGridViewTextBoxColumn
-            // 
-            this.gorevDataGridViewTextBoxColumn.DataPropertyName = "gorev";
-            this.gorevDataGridViewTextBoxColumn.HeaderText = "gorev";
-            this.gorevDataGridViewTextBoxColumn.Name = "gorevDataGridViewTextBoxColumn";
-            // 
-            // adresDataGridViewTextBoxColumn
-            // 
-            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
-            this.adresDataGridViewTextBoxColumn.HeaderText = "adres";
-            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
-            // 
-            // telefonDataGridViewTextBoxColumn
-            // 
-            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
-            this.telefonDataGridViewTextBoxColumn.HeaderText = "telefon";
-            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
             // 
             // personelbilgileriBindingSource
             // 
@@ -159,6 +118,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.sil);
@@ -392,15 +352,68 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 60);
+            this.label1.Location = new System.Drawing.Point(28, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.Size = new System.Drawing.Size(92, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "T.C Kimlik :";
+            this.label1.Text = "**T.C Kimlik :";
             // 
             // personel_bilgileriTableAdapter
             // 
             this.personel_bilgileriTableAdapter.ClearBeforeFill = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(55, 250);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(288, 15);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "**Lütfen silmek istediğiniz personelin TC\'sini giriniz!";
+            // 
+            // pertcDataGridViewTextBoxColumn
+            // 
+            this.pertcDataGridViewTextBoxColumn.DataPropertyName = "per_tc";
+            this.pertcDataGridViewTextBoxColumn.HeaderText = "T.C";
+            this.pertcDataGridViewTextBoxColumn.Name = "pertcDataGridViewTextBoxColumn";
+            // 
+            // peradDataGridViewTextBoxColumn
+            // 
+            this.peradDataGridViewTextBoxColumn.DataPropertyName = "per_ad";
+            this.peradDataGridViewTextBoxColumn.HeaderText = "Personel Ad";
+            this.peradDataGridViewTextBoxColumn.Name = "peradDataGridViewTextBoxColumn";
+            // 
+            // persoyadDataGridViewTextBoxColumn
+            // 
+            this.persoyadDataGridViewTextBoxColumn.DataPropertyName = "per_soyad";
+            this.persoyadDataGridViewTextBoxColumn.HeaderText = "Personel Soyad";
+            this.persoyadDataGridViewTextBoxColumn.Name = "persoyadDataGridViewTextBoxColumn";
+            // 
+            // epostaDataGridViewTextBoxColumn
+            // 
+            this.epostaDataGridViewTextBoxColumn.DataPropertyName = "e_posta";
+            this.epostaDataGridViewTextBoxColumn.HeaderText = "E-Posta";
+            this.epostaDataGridViewTextBoxColumn.Name = "epostaDataGridViewTextBoxColumn";
+            // 
+            // gorevDataGridViewTextBoxColumn
+            // 
+            this.gorevDataGridViewTextBoxColumn.DataPropertyName = "gorev";
+            this.gorevDataGridViewTextBoxColumn.HeaderText = "Görev";
+            this.gorevDataGridViewTextBoxColumn.Name = "gorevDataGridViewTextBoxColumn";
+            // 
+            // adresDataGridViewTextBoxColumn
+            // 
+            this.adresDataGridViewTextBoxColumn.DataPropertyName = "adres";
+            this.adresDataGridViewTextBoxColumn.HeaderText = "Adres";
+            this.adresDataGridViewTextBoxColumn.Name = "adresDataGridViewTextBoxColumn";
+            // 
+            // telefonDataGridViewTextBoxColumn
+            // 
+            this.telefonDataGridViewTextBoxColumn.DataPropertyName = "telefon";
+            this.telefonDataGridViewTextBoxColumn.HeaderText = "Telefon";
+            this.telefonDataGridViewTextBoxColumn.Name = "telefonDataGridViewTextBoxColumn";
             // 
             // PersonelBilgi
             // 
@@ -462,5 +475,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gorevDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn adresDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label9;
     }
 }

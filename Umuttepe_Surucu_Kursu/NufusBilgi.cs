@@ -56,6 +56,8 @@ namespace Umuttepe_Surucu_Kursu
             }
         }
 
+        //https://www.youtube.com/watch?v=6Qw73qDj8VQ&ab_channel=AhmetHakanErg%C3%BCn 
+
         private void seriNo_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);

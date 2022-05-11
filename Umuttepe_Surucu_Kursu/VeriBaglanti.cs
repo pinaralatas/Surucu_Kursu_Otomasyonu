@@ -14,9 +14,7 @@ namespace Umuttepe_Surucu_Kursu
         public string baglantiStr;
 
         SqlConnection baglanti;
-        SqlCommand komut;
-        SqlDataAdapter da;
-        SqlDataReader okuyucu;
+       
 
         public VeriBaglanti()
         {
